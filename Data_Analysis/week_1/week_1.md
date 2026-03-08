@@ -116,11 +116,11 @@ https://www.youtube.com/watch?v=D46j-e_IHlI&list=PLVsNizTWUw7FGzSRCkQrPEEe-ljVXg
 
 # 2️⃣ 수행 인증
 
-![result1](images/week1_(1).png)
-![result2](images/week1_(2).png)
-![result3](images/week1_(3).png)
-![result4](images/week1_(4).png)
-![result5](images/week1_(5).png)
+![result1](image/week1_(1).png)
+![result2](image/week1_(2).png)
+![result3](image/week1_(3).png)
+![result4](image/week1_(4).png)
+![result5](image/week1_(5).png)
 
 
 <br>
