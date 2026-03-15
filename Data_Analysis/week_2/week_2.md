@@ -280,7 +280,10 @@ prd_link = soup.find('a', atrs={'class':'gd_name'})
 
 # 2️⃣ 수행 인증
 
-<!-- 교재에서 안내된 과정을 직접 실행해본 뒤, 진행 결과가 보이도록 4~6장의 스크린샷을 캡처하여 아래에 첨부해주세요.-->
+![result1](image/week2_(1).png)
+![result2](image/week2_(2).png)
+![result3](image/week2_(3).png)
+![result4](image/week2_(4).png)
 
 
 
