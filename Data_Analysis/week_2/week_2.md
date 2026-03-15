@@ -280,10 +280,10 @@ prd_link = soup.find('a', atrs={'class':'gd_name'})
 
 # 2️⃣ 수행 인증
 
-![result1](image/week2_(1).png)
-![result2](image/week2_(2).png)
-![result3](image/week2_(3).png)
-![result4](image/week2_(4).png)
+![result1](./image/week_2(1).png)
+![result2](./image/week_2(2).png)
+![result3](./image/week_2(3).png)
+![result4](./image/week_2(4).png)
 
 
 
