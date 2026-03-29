@@ -294,10 +294,124 @@ values[max_idx]  # 등장 횟수가 가장 많은 값의 인덱스 값 출력
 
 두 변수 or 두 가지 특성값을 직교 좌표계에 점으로 나타내는 그래프
 
-- 
+**2. 산점도를 그려보자**
 
+- matplotlib.pyplot
 
+맷플롯립에서 제공하는 그래프 함수의 패키지
 
+```python
+import matplotlib.pyplot as plt
+# 패키지 이름이 길어서 plt로 줄여서 씀
+```
+
+- scatter() 함수
+
+함수 첫 번째 매개변수에 x축 좌표, 두 번째 매개변수에 y축 좌표 전달 <br>
+scatter 호출한 다음에는 **show()**로 그래프 출력
+
+```python
+plt.scatter(x축 데이터, y축 데이터)
+plt.show()
+```
+
+- alpha 매개변수 <br>
+0-1 사이의 값으로 투명도 지정
+
+```python
+plt.scatter(x축 데이터, y축 데이터, alpha = 0-1 사이의 값)
+plt.show()
+```
+
+### 📌 히스토그램 그리기
+
+**1. 히스토그램이란**
+
+수치형 특성의 값을 일정한 구간으로 나누어 구간 안에 포함된 데이터 개수를 막대 그래프로 그린 것. 구간 안에 속한 데이터의 개수를 도수라고 함.
+
+**2. 히스토그램을 그려보자**
+
+- hist() 함수
+    - 1차원 데이터를 입렵받아 히스토그램 그림
+    - 기본적으로 데이터를 10개의 구간으로 나눔
+    - bins 매개변수: 구간의 수를 정함
+
+```python
+plt.hist(데이터, bins=구간 몇 개)
+plt.show()
+```
+
+- histogram_bin_edges() 함수
+    - numpy에서 제공하는 함수
+    - 구간이 어떻게 나누어졌는지 수치를 확인할 수 있음
+
+```python
+import numpy as np
+np.histogram_bun_edges(데이터, bins=숫자 정하기)
+```
+
+- randn() 함수
+    - numpy에서 제공하는 함수
+    - 표준정규분포를 따르는 랜덤한 실수 생성
+    - 원하는 샘플 개수를 전달하여 난수 생성 가능
+
+```python
+np.random.seed(42)
+random_samples = np.rnadom.radn(1000)
+```
+
+- seed() 함수
+    - 유사난수 생성 가능
+    - 실습 결과를 동일하게 만들기 위해 seed() 사용
+    - seed()에 동일한 값을 사용하는 한 언제나 동일한 난수 추출 가능
+
+- 로그 스케일
+    - 한 구간의 도수가 너무 커서 다른 구간에 도수가 표시되지 않는 현상 발생 >> y축을 로그 스케일로 바꿈
+    - yscale()함수에 'log' 지정하면 끝
+    - x축에도 적용 가능 >> xscale('log')
+
+```python
+plt.hist(데이터)
+plt.yscale('log')
+plt.show()
+```
+
+### 📌 상자 수염 그림 그리기
+
+**1. 상자 수염 그림이란**
+
+최솟값, 세 개의 사분위수, 최댓값 이렇게 다섯 개의 숫자를 사용해 데이터를 요약하는 그래프
+
+**2. 상자 수염 그림을 그려보자**
+
+- boxplot() 함수
+
+```python
+plt.boxplot(데이터)
+plt.show()
+# y값이 너무 커 결과가 잘 나오지 않는다면 여기서도 로그 스케일 사용 가능
+```
+
+- vert 매개변수
+    - 상자수염 수평으로 그리기
+    - 기본값이 True. False로 바꾸면 수평으로 그려짐
+
+```python
+plt.boxplot(데이터, vert=False)
+plt.xscale('log')
+plt.show()
+```
+
+- whis 매개변수
+    - 수염 길이 조정하기
+    - 기본값 1.5. 숫자를 넣으면 이것의 n배의 수염을 볼 수 있게 됨
+    - 백분율로도 지정 가능
+        - ex) (10, 90) >> 10%, 90% 백분위수에 해당하는 데이터까지 수염 그림
+
+```python
+plt.boxplot(데이터, whis=숫자 쓰기)
+plt.show()
+```
 
 
 ### 📌 한바닥 정리
@@ -335,8 +449,9 @@ values[max_idx]  # 등장 횟수가 가장 많은 값의 인덱스 값 출력
 
 # 2️⃣ 수행 인증
 
-<!-- 교재에서 안내된 과정을 직접 실행해본 뒤, 진행 결과가 보이도록 3장 이상의 스크린샷을 캡처하여 아래에 첨부해주세요.-->
-
+![result1](./image/week_4(1).png)
+![result2](./image/week_4(2).png)
+![result3](./image/week_4(3).png)
 
 
 <br>
@@ -350,8 +465,7 @@ values[max_idx]  # 등장 횟수가 가장 많은 값의 인덱스 값 출력
 작업은 코랩에서 진행한 뒤, 코랩 링크를 아래에 첨부해주세요.**
 
 ```
-여기에 코랩 링크를 첨부해주세요!
-(제출 전, 코랩의 공유 설정을 ‘링크가 있는 모든 사용자가 보기 가능’으로 변경했는지 반드시 확인해주세요.)
+https://colab.research.google.com/drive/1-U1-2H_dcE5KANBW9pzNT1eDRpPqpMgT?usp=sharing
 ```
 
 
