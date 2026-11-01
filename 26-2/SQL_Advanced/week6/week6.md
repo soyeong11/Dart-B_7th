@@ -87,10 +87,17 @@ https://www.youtube.com/watch?v=bggWVsBmKag&list=PLVsNizTWUw7GCfy5RH27cQL5MeKYnl
 
 <!-- 트리거에 관해 배우게 된 점을 적어주세요. -->
 
+### 1. 트리거
+- 개요: 테이블에 insert나 update 또는 delete 박업이 발생하면 실행되는 코드
+- 기본 작동: DML문의 이벤트가 발생할 때 작동
+
+
 <!-- 이번 챕터에서는 확인문제를 실습 인증으로 대체하여 진행합니다. 제시된 실습을 흐름에 맞게 진행한 후, 실습 과정이 보일 수 있도록 인증 사진을 2장 이상 제출해 주세요. -->
 
 <!-- 이 부분을 지우고 인증사진을 제출해주세요.-->
+![alt text](image-4.png)
 
+![alt text](image-5.png)
 
 ---
 
